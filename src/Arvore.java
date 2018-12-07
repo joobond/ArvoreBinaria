@@ -33,6 +33,61 @@ public class Arvore {
         }
     }
 
+    public void preOrdem(){
+
+        //Visitar Raíz
+        System.out.print(conteudo + " ");
+
+        //Percorrer a esquerda
+        if(esquerda != null){
+            esquerda.preOrdem();
+        }
+
+        //Percorrer a direita
+        if(direita != null){
+            direita.preOrdem();
+        }
+    }
+
+    public void inOrdem(){
+
+        if(esquerda != null){
+            esquerda.inOrdem();
+        }
+
+        System.out.print(conteudo + " ");
+
+        if(direita != null){
+            direita.inOrdem();
+        }
+    }
+
+    public void posOrdem(){
+
+        if(esquerda != null){
+            esquerda.posOrdem();
+        }
+
+        if(direita != null){
+            direita.posOrdem();
+        }
+
+        System.out.print(conteudo + " ");
+    }
+
+    public void inOrdemInvertida(){
+
+        if(direita != null){
+            direita.inOrdemInvertida();
+        }
+
+        System.out.print(conteudo + " ");
+
+        if(esquerda != null){
+            esquerda.inOrdemInvertida();
+        }
+    }
+
 
 
 
